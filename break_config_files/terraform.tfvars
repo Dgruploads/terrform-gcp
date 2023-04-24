@@ -1,5 +1,4 @@
-credentials_file      = file("../creds.json")
-project_name          = "dept-primacy-383707 "
+project_name          = "adept-primacy-383707"
 region_name           = "us-east4"
 zone_name             = "us-east4-c"
 resource_name         = "terraform-example"
