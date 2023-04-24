@@ -57,3 +57,8 @@ variable "disk_size" {
   type        = number
   description = "Size of the google cloud disk"
 }
+
+variable "disk_image" {
+  type        = string
+  description = "Image for the google cloud disk"
+}
