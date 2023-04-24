@@ -13,11 +13,6 @@ variable "zone_name" {
   description = "name of the zone to create the resources"
 }
 
-variable "credentials_file" {
-  type        = string
-  description = "Location of the file containing the credentails"
-}
-
 variable "resource_name" {
   type        = string
   description = "Name of the google compute engine resource"
