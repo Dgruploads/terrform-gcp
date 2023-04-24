@@ -1,6 +1,0 @@
-provider "google" {
-  credentials = file("../creds.json")
-  project = "adept-primacy-383707"
-  region  = "us-east4"
-  zone    = "us-east4-c"
-}
