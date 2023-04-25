@@ -69,7 +69,7 @@ variable "bucket_location" {
 }
 
 variable "bucket_destroy_status" {
-  type        = boolean
+  type        = bool
   description = "Destroy status of the google cloud bucket"
 }
 
@@ -84,7 +84,7 @@ variable "network_name" {
 }
 
 variable "subnetwork_create_status" {
-  type        = boolean
+  type        = bool
   description = "Whether to create the subnetwork for the network"
 }
 
