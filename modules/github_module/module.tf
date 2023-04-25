@@ -1,8 +1,21 @@
 module "child_module_example" {
   source                = "github.com/Dgruploads/terrform-gcp/modules/root_module"
-  ec2_image             = var.ec2_image
-  ec2_instance_type     = var.ec2_instance_type
-  ec2_vpc_id            = var.ec2_vpc_id
-  s3_bucket_name        = var.s3_bucket_name  
-  ec2_region            = var.ec2_region 
+  resource_name         = var.resource_name
+  resource_machine_name = var.resource_machine_name
+  resource_image        = var.resource_image
+  network_type          = var.network_type
+  disk_name             = var.disk_name
+  disk_type             = var.disk_type
+  zone_name             = var.zone_name
+  resource_image        = var.resource_image
+  disk_label            = var.disk_label
+  disk_size             = var.disk_size
+  disk_image            = var.disk_image
+  bucket_name           = var.bucket_name
+  bucket_location       = var.bucket_location
+  bucket_destroy_status = var.bucket_destroy_status
+  bucket_public_access  = var.bucket_public_access
+  network_name          = var.network_name
+  subnetwork_create_status = var.subnetwork_create_status
+  network_mtu              = var.network_mtu
 }
