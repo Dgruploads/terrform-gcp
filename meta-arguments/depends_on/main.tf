@@ -38,6 +38,14 @@ resource "google_compute_instance" "dev1" {
   }
 
   # Ensure firewall rule is provisioned before server, so that SSH doesn't fail.
-  depends_on = ["google_compute_firewall.gh-9564-firewall-externalssh"]
+  depends_on = [google_compute_firewall.gh-9564-firewall-externalssh,google_storage_bucket.auto-expire]
 
+}
+
+resource "google_storage_bucket" "auto-expire" {
+  name          = "dgruploads-public-access-bucket"
+  location      = "US"
+  force_destroy = true
+
+  public_access_prevention = "enforced"
 }
