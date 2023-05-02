@@ -1,0 +1,7 @@
+project_name          = "student-00501"
+default_region_name   = "us-east4"
+default_zone_name     = "us-east4-c"
+resource_name         = "terraform-example-new"
+resource_machine_name = "n1-standard-1"
+resource_image        = "debian-cloud/debian-11"
+network_type          = "default"
