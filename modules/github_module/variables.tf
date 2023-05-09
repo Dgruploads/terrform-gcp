@@ -33,31 +33,6 @@ variable "network_type" {
   description = "Name of the network to create the resources"
 }
 
-variable "disk_name" {
-  type        = string
-  description = "Name of the google cloud disk"
-}
-
-variable "disk_type" {
-  type        = string
-  description = "type of google cloud disk"
-}
-
-variable "disk_label" {
-  type        = string
-  description = "Label name of the google cloud disk"
-}
-
-variable "disk_size" {
-  type        = number
-  description = "Size of the google cloud disk"
-}
-
-variable "disk_image" {
-  type        = string
-  description = "Image for the google cloud disk"
-}
-
 variable "bucket_name" {
   type        = string
   description = "Name of the google cloud bucket"
@@ -69,7 +44,7 @@ variable "bucket_location" {
 }
 
 variable "bucket_destroy_status" {
-  type        = boolean
+  type        = bool
   description = "Destroy status of the google cloud bucket"
 }
 
@@ -84,7 +59,7 @@ variable "network_name" {
 }
 
 variable "subnetwork_create_status" {
-  type        = boolean
+  type        = bool
   description = "Whether to create the subnetwork for the network"
 }
 
