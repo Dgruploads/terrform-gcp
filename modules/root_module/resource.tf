@@ -16,29 +16,17 @@ resource "google_compute_instance" "vm_instance" {
   }
 }
 
-
-resource "google_compute_disk" "custom_disk" {
-  name  = var.disk_name
-  type  = var.disk_type
-  zone  = var.zone_name
-  image = var.resource_image
-  labels = {
-    environment = var.disk_label
-  }
-  physical_block_size_bytes = var.disk_size
-}
-
 resource "google_storage_bucket" "auto-expire" {
-  name          = "dgruploads-example-bucket"
+  name          = var.bucket_name
   location      = "US"
-  force_destroy = true
+  force_destroy = var.bucket_destroy_status
 
-  public_access_prevention = "enforced"
+  public_access_prevention = var.bucket_public_access
 }
 
 resource "google_compute_network" "vpc_network" {
-  project                 = "dgruploads-custom-network"
-  name                    = "dgruploads-custom-network"
-  auto_create_subnetworks = true
-  mtu                     = 1460
+  project                 = var.project_name
+  name                    = var.network_name
+  auto_create_subnetworks = var.subnetwork_create_status
+  mtu                     = var.network_mtu
 }
